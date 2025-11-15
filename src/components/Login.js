@@ -1,13 +1,60 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Header from "./Header";
+import { checkValidateData } from "../utils/validate";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../utils/firebase";
 
 const Login = () => {
 
-    const [isSignInForm, setIsSignInFormt] = useState(true);
+    const [isSignInForm, setIsSignInForm] = useState(true);
+    const email = useRef(null);
+    const password = useRef(null);
+    const name = useRef(null);
+
+    const [errorMessage, setErrorMessage] = useState(null);
     const handleIsSignForm = () => {
-        setIsSignInFormt(!isSignInForm);
+        setIsSignInForm(!isSignInForm);
     }
 
+    const handleValidation = () => {
+        const message = checkValidateData(email.current.value, password.current.value, isSignInForm ? null : name.current.value);
+        setErrorMessage(message);
+
+        // If email or password or name invalid
+        if (message) return;
+
+        // if email and password and name is valid
+        if (!isSignInForm) {
+            //Sign Up logic
+            createUserWithEmailAndPassword(auth, email.current.value, password.current.value)
+                .then((userCredential) => {
+                    // Signed up 
+                    const user = userCredential.user;
+                    console.log(user);
+                })
+                .catch((error) => {
+
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    setErrorMessage(errorCode + " - " + errorMessage);
+                });
+        }
+        else {
+            // Sign In logic
+            signInWithEmailAndPassword(auth, email.current.value, password.current.value)
+                .then((userCredential) => {
+                    // Signed in 
+                    const user = userCredential.user;
+                    console.log(user);
+                })
+                .catch((error) => {
+                    console.log(error);
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    setErrorMessage(errorCode + " - " + errorMessage);
+                });
+        }
+    }
     return (
         <>
             <div className="">
@@ -16,22 +63,46 @@ const Login = () => {
                     <img src="https://assets.nflxext.com/ffe/siteui/vlv3/e94073b0-a056-402f-9015-16cb1e7e45c2/web/IN-en-20251110-TRIFECTA-perspective_46e74acc-70aa-4691-988a-dbcf958149d1_large.jpg"
                         alt="logo" />
                 </div>
-                <form className="absolute p-12 bg-black w-3/12 mt-36 mx-auto left-0 right-0 text-white rounded-lg bg-opacity-80">
+                <form
+                    onSubmit={(e) => e.preventDefault()}
+                    className="absolute p-12 bg-black w-3/12 mt-36 mx-auto left-0 right-0 text-white rounded-lg bg-opacity-80">
                     <h1 className="font-bold text-2xl py-3 px-2">{isSignInForm ? "Sign In" : "Sign Up"}</h1>
-                    {isSignInForm && <input type="text" placeholder="Full Name" className="p-2 m-2 w-full rounded-lg bg-gray-700" />}
+                    {!isSignInForm && <input
+                        ref={name}
+                        type="text"
+                        placeholder="Full Name"
+                        className="p-2 m-2 w-full rounded-lg bg-gray-700"
+                    />}
+                    <p className="text-red-700 font-bold p-2">{errorMessage?.includes("Name") ? errorMessage : ""}</p>
                     <input
+                        ref={email}
                         type="text"
                         placeholder="Email Address"
                         className="p-2 m-2 w-full rounded-lg bg-gray-700"
                     />
+                    <p className="text-red-700 font-bold p-2">{errorMessage?.includes("Email") ? errorMessage : ""}</p>
                     <input
+                        ref={password}
                         type="password"
                         placeholder="Password"
                         className="p-2 m-2 w-full rounded-lg bg-gray-700"
                     />
+                    <p className="text-red-700 font-bold p-2">{errorMessage?.includes("Password") ? errorMessage : ""}</p>
+                    {/* Other errors (general errors) */}
+                    <p className="text-red-700 font-bold p-2">
+                        {
+                            errorMessage &&
+                                !errorMessage.includes("Name") &&
+                                !errorMessage.includes("Email") &&
+                                !errorMessage.includes("Password")
+                                ? errorMessage
+                                : ""
+                        }
+                    </p>
                     <button
-                        className="p-2 m-2 bg-red-500 rounded-lg w-full"
-                        type="submit">{isSignInForm ? "Sign In" : "Sign Up"}
+                        className="p-2 m-2 bg-red-500 rounded-lg w-full cursor-pointer"
+                        onClick={handleValidation}
+                    >{isSignInForm ? "Sign In" : "Sign Up"}
                     </button>
                     <p className="px-2 py-4 text-sm cursor-pointer" onClick={handleIsSignForm}>{isSignInForm ? "New to Netflix? Sign Up Now" : "Already Registered? Sign In Now"}</p>
                 </form>
