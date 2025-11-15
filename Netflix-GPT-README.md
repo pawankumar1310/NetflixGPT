@@ -49,3 +49,7 @@ Using React
 - Netflix-GPT
     - Search bar
     - Movie Suggestions
+
+# Notes :
+- If Form is very big and you want to validate each and every field, handling errors then we use external library.
+    - Formik (https://formik.org/docs/guides/validation)
