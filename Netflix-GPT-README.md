@@ -64,6 +64,16 @@ Using React
     - Form Validation
     - useRef Hook : It will use where you want to refer input field or button or any thing.It will give value of that input field.
     - regix of email, password and name validation
+    - Firebase Setup
+    - Deploying our app to production
+    - create sign up User account
+    - Implement sign in user api
+    - Created redux store with userSlic
+    - Implemented Sign out
+    - Update profile
+    - Fetch from TMDB Movies
+
+
 # Firebase (firebase.google.com) : For Authentication
 - Open firebase link => Build => Go to Build => Authentication => Get Started => Create a new Project => Netflix-GPT =>  Continue => NetFlix-GPT project created. => Add App => Web => create again project with same name.
 - install firebase :
@@ -107,3 +117,14 @@ Using React
         - `firebase deploy`
 #
 - Create Sign Up User Account with firebase api.
+- install Redux to store global user info.
+    - `npm install -D @reduxjs/toolkit`
+    - `npm install react-redux`
+- create Redux store with userSlice
+    - create userSlice.js file in utils folder
+        - create slice for user
+    - create appStore.js file in utils folder
+        - configureStore({});
+    - in App.js file, configure Redux through Provider.
+
+- Fetch from TMDB Movies 
