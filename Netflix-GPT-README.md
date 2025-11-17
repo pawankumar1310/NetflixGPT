@@ -127,4 +127,5 @@ Using React
         - configureStore({});
     - in App.js file, configure Redux through Provider.
 
+# Episode 15 - NetflixGPT - Building the Core
 - Fetch from TMDB Movies 
