@@ -72,6 +72,8 @@ Using React
     - Implemented Sign out
     - Update profile
     - Fetch from TMDB Movies
+    - BugFix : Sign up user displayName and profile picture update
+    - BugFix : If the use is not logged In Redirect /browse to login page and vice versa.
 
 
 # Firebase (firebase.google.com) : For Authentication
