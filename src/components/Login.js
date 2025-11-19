@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import { auth } from "../utils/firebase";
 import { useDispatch } from "react-redux";
 import { addUser } from "../utils/userSlice";
+import { BackgroundBody_Image, USER_AVATAR } from "../utils/constants";
 
 const Login = () => {
 
@@ -38,7 +39,7 @@ const Login = () => {
                     console.log(user);
                     updateProfile(user, {
                         displayName: name.current.value,
-                        photoURL: "https://avatars.githubusercontent.com/u/72221154?v=4"
+                        photoURL: USER_AVATAR
                     }).then(() => {
                         // Profile updated!
                         console.log(user);
@@ -77,7 +78,7 @@ const Login = () => {
             <div className="">
                 <Header />
                 <div className="absolute">
-                    <img src="https://assets.nflxext.com/ffe/siteui/vlv3/e94073b0-a056-402f-9015-16cb1e7e45c2/web/IN-en-20251110-TRIFECTA-perspective_46e74acc-70aa-4691-988a-dbcf958149d1_large.jpg"
+                    <img src={BackgroundBody_Image}
                         alt="logo" />
                 </div>
                 <form

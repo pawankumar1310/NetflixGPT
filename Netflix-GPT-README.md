@@ -74,6 +74,8 @@ Using React
     - Fetch from TMDB Movies
     - BugFix : Sign up user displayName and profile picture update
     - BugFix : If the use is not logged In Redirect /browse to login page and vice versa.
+    - Unsubscribed to the onAuthStateChanged callback.
+    - Add hardcoded values to the constants file.
 
 
 # Firebase (firebase.google.com) : For Authentication
@@ -130,4 +132,9 @@ Using React
     - in App.js file, configure Redux through Provider.
 
 # Episode 15 - NetflixGPT - Building the Core
-- Fetch from TMDB Movies 
+- Fetch from TMDB Movies : This database has all incoming movies data. We can use their api.
+    - Register on TMDB (https://www.themoviedb.org/)
+    - Go to Edit profile => API and Request an API Key
+    - Goto documentation of TMDB (https://developer.themoviedb.org/docs/getting-started)
+        - Goto API Reference section
+        - Choose Now Playing API (which gives latest movies)
