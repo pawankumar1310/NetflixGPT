@@ -86,6 +86,7 @@ Using React
     - update store with Trailer video data
     - Embedded the Youtube video and make it autoplay and mute
     - Tailwind classes (aspect video, bg-opacity) to make MainContainer look awesome.
+    - Built Secondary Component
 
 # Firebase (firebase.google.com) : For Authentication
 - Open firebase link => Build => Go to Build => Authentication => Get Started => Create a new Project => Netflix-GPT =>  Continue => NetFlix-GPT project created. => Add App => Web => create again project with same name.
