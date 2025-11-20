@@ -76,7 +76,16 @@ Using React
     - BugFix : If the use is not logged In Redirect /browse to login page and vice versa.
     - Unsubscribed to the onAuthStateChanged callback.
     - Add hardcoded values to the constants file.
-
+    - Register TMDB API and create an app & get access token
+    - Get Data from TMDB now playing movies list.
+    - Custom hook for NowPlaying Movies
+    - Create movieSlice
+    - Update store with movies data
+    - Planing for MainContainer & Secondary Container
+    - Fetch data from Trailer video
+    - update store with Trailer video data
+    - Embedded the Youtube video and make it autoplay and mute
+    - Tailwind classes (aspect video, bg-opacity) to make MainContainer look awesome.
 
 # Firebase (firebase.google.com) : For Authentication
 - Open firebase link => Build => Go to Build => Authentication => Get Started => Create a new Project => Netflix-GPT =>  Continue => NetFlix-GPT project created. => Add App => Web => create again project with same name.
@@ -137,4 +146,7 @@ Using React
     - Go to Edit profile => API and Request an API Key
     - Goto documentation of TMDB (https://developer.themoviedb.org/docs/getting-started)
         - Goto API Reference section
+        - Create an app and get access token
         - Choose Now Playing API (which gives latest movies)
+        - Get Data from TMDB now playing movies list.
+        - Create moivesSlice.js
