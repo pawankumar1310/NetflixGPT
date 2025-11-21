@@ -92,6 +92,7 @@ Using React
     - TMDB Image CDN URL
     - Made the Browser page amazing with Tailwind css
     - usePopularMovies Custom hooks
+    - GPT Search Feature
     
 
 # Firebase (firebase.google.com) : For Authentication
@@ -157,3 +158,7 @@ Using React
         - Choose Now Playing API (which gives latest movies)
         - Get Data from TMDB now playing movies list.
         - Create moivesSlice.js
+
+# Episode 16 - NetflixGPT - Wrapping up
+- Create GPT Search button
+- Create GPT Search Component
