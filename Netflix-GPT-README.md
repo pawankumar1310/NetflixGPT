@@ -87,6 +87,12 @@ Using React
     - Embedded the Youtube video and make it autoplay and mute
     - Tailwind classes (aspect video, bg-opacity) to make MainContainer look awesome.
     - Built Secondary Component
+    - Build Movie List
+    - Build Movie Card
+    - TMDB Image CDN URL
+    - Made the Browser page amazing with Tailwind css
+    - usePopularMovies Custom hooks
+    
 
 # Firebase (firebase.google.com) : For Authentication
 - Open firebase link => Build => Go to Build => Authentication => Get Started => Create a new Project => Netflix-GPT =>  Continue => NetFlix-GPT project created. => Add App => Web => create again project with same name.

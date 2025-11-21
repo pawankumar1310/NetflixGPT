@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* To hide overflow-x-scroll and functionality should work in SecondaryContainer */
+::-webkit-scrollbar{
+    display: none;
+}
