@@ -93,6 +93,8 @@ Using React
     - Made the Browser page amazing with Tailwind css
     - usePopularMovies Custom hooks
     - GPT Search Feature
+    - GPT Search bar
+    - (Imp) Multi-language feature in our app.
     
 
 # Firebase (firebase.google.com) : For Authentication
@@ -162,3 +164,4 @@ Using React
 # Episode 16 - NetflixGPT - Wrapping up
 - Create GPT Search button
 - Create GPT Search Component
+- Multilanguage feature

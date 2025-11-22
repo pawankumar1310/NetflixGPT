@@ -4,8 +4,9 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addUser, removeUser } from "../utils/userSlice";
 import { useEffect, useState } from "react";
-import { LOGO_Header } from "../utils/constants";
+import { LOGO_Header, SUPPORTED_LANG } from "../utils/constants";
 import { showGPTSearchView } from "../utils/gptSlice";
+import { selectedLanguage } from "../utils/languageSlice";
 
 const Header = () => {
 
@@ -49,11 +50,14 @@ const Header = () => {
         return () => subscribe();
     }, []);
 
-    const handleGPTSearch = ()=>{
-       
+    const handleGPTSearch = () => {
+
         dispatch(showGPTSearchView(!isGPTSearch));
     }
 
+    const handleOnSelectLanguage = (e) => {
+        dispatch(selectedLanguage(e.target.value));
+    }
     return (
         <>
             <div className="absolute px-2 py-2 bg-gradient-to-b from-black z-10 w-screen flex justify-between">
@@ -63,10 +67,25 @@ const Header = () => {
                     alt="logo"
                 />
                 {user && <div className="flex cursor-pointer">
+                    {isGPTSearch && <select
+                        className="h-10 px-4 mx-2 mt-2 text-white bg-gray-700 rounded-lg cursor-pointer"
+                        onChange={handleOnSelectLanguage}
+                    >
+
+                        {SUPPORTED_LANG.map(
+                            (lang) => (
+                                <option key={lang.identifier} value={lang.identifier} >
+                                    {lang.name}
+                                </option>
+                            )
+                        )
+                        }
+                    </select>}
+                    
                     <button
                         onClick={handleGPTSearch}
                         className="h-10 px-5 mx-2 mt-2 bg-purple-800 rounded-lg text-white hover:bg-purple-400">
-                        GPT Search
+                        {isGPTSearch ? "🏡 Home" : "GPT Search"}
                     </button>
                     <img
                         onClick={handleUserProfile}
