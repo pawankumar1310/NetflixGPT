@@ -36,13 +36,11 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed up 
                     const user = userCredential.user;
-                    console.log(user);
                     updateProfile(user, {
                         displayName: name.current.value,
                         photoURL: USER_AVATAR
                     }).then(() => {
                         // Profile updated!
-                        console.log(user);
                         const { uid, email, displayName, photoURL } = auth.currentUser;
                         dispatch(addUser({ uid: uid, email: email, displayName: displayName, photoURL: photoURL }));
                     }).catch((error) => {
@@ -63,10 +61,8 @@ const Login = () => {
                 .then((userCredential) => {
                     // Signed in 
                     const user = userCredential.user;
-                    console.log(user);
                 })
                 .catch((error) => {
-                    console.log(error);
                     const errorCode = error.code;
                     const errorMessage = error.message;
                     setErrorMessage(errorCode + " - " + errorMessage);

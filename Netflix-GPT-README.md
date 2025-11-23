@@ -165,3 +165,11 @@ Using React
 - Create GPT Search button
 - Create GPT Search Component
 - Multilanguage feature
+- Go to platform openai website (https://platform.openai.com/)
+- create new secret key (API Keys)
+- install openai : 
+    `npm install openai`
+- create openai.js file to call openai method
+- Search movies
+- create .env file to keep your secret key (AI_Key);
+- memoization (To stop each and every time api call)

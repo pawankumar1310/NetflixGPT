@@ -4,7 +4,6 @@ import MovieList from "./MovieList";
 
 const SecondaryContainer = () => {
     const movies = useSelector((store) => store.movie);
-    console.log(movies);
     return (
         <>
             <div className="bg-black">
