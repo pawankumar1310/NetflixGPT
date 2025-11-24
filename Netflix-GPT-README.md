@@ -95,6 +95,15 @@ Using React
     - GPT Search Feature
     - GPT Search bar
     - (Imp) Multi-language feature in our app.
+    - Get Open AI Api Key
+    - GPT Search API Call
+    - Fetched getmovieSuggestions from TMDB
+    - created gptSlice added data
+    - Reused movie List component to make movie suggestion container
+    - Memoization
+    - Added .env file
+    - Added .env file to gitignore
+    - Made our site responsive
     
 
 # Firebase (firebase.google.com) : For Authentication
@@ -173,3 +182,4 @@ Using React
 - Search movies
 - create .env file to keep your secret key (AI_Key);
 - memoization (To stop each and every time api call)
+- Make app responsive

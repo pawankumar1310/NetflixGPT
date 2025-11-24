@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { API_Options, BackgroundBody_Image } from "../utils/constants";
+import { API_Options} from "../utils/constants";
 import lang from "../utils/languageConstants";
 import { useRef } from "react";
 import genAI from "../utils/openai";
@@ -34,12 +34,8 @@ const GPTSearchBar = () => {
     }
     return (
         <>
-            <div className="fixed -z-10">
-                <img src={BackgroundBody_Image}
-                    alt="logo" />
-            </div>
-            <div className="pt-[10%] flex justify-center ">
-                <form className="w-1/2 bg-black grid grid-cols-12 rounded-lg" onSubmit={(e) => e.preventDefault()}>
+            <div className="pt-[35%] md:pt-[10%] flex justify-center ">
+                <form className="w-full md:w-1/2 bg-black grid grid-cols-12 rounded-lg" onSubmit={(e) => e.preventDefault()}>
                     <input
                         ref={searchText}
                         type="text"

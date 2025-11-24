@@ -4,7 +4,7 @@ const MovieCard = ({posterPath})=>{
     if(!posterPath) return null;
     return(
         <>
-            <div className="w-40 pr-2">
+            <div className="w-24 md:w-40 pr-2">
                 <img 
                     alt="logo"
                     src={Poster_Movie_URL + posterPath}

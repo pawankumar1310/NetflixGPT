@@ -2,16 +2,18 @@ import { useSelector } from "react-redux";
 import VideoBackground from "./VideoBackground";
 import VideoTitle from "./VideoTitle";
 
-const MainContainer = ()=>{
+const MainContainer = () => {
     const movies = useSelector(store => store.movie?.nowPlayingMovies);
-    if(!movies) return;
+    if (!movies) return;
 
     const mainMovie = movies[0];
-    const {original_title, overview,id} = mainMovie;
-    return(
+    const { original_title, overview, id } = mainMovie;
+    return (
         <>
-            <VideoTitle title={original_title} description={overview}/>
-            <VideoBackground movieId={id}/>
+            <div className="pt-[30%] bg-black md:pt-0">
+                <VideoTitle title={original_title} description={overview} />
+                <VideoBackground movieId={id} />
+            </div>
         </>
     )
 }

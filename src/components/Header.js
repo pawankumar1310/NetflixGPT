@@ -60,13 +60,13 @@ const Header = () => {
     }
     return (
         <>
-            <div className="absolute px-2 py-2 bg-gradient-to-b from-black z-10 w-screen flex justify-between">
+            <div className="absolute px-2 py-2 bg-gradient-to-b from-black z-10 w-screen flex  flex-col md:flex-row justify-between">
                 <img
-                    className="w-40"
+                    className="w-20 mx-auto md:m-0 md:w-40"
                     src={LOGO_Header}
                     alt="logo"
                 />
-                {user && <div className="flex cursor-pointer">
+                {user && <div className="flex cursor-pointer justify-between">
                     {isGPTSearch && <select
                         className="h-10 px-4 mx-2 mt-2 text-white bg-gray-700 rounded-lg cursor-pointer"
                         onChange={handleOnSelectLanguage}
@@ -95,7 +95,7 @@ const Header = () => {
                     />
                     {isUserProfileClick &&
                         <button
-                            className="font-bold mx-2 text-white bg-red-500 h-10 px-5 mt-2 rounded-lg"
+                            className="font-bold mx-2 text-white bg-red-500 h-10  px:2 md:px-5 mt-2 rounded-lg"
                             onClick={handleSignOut}
                         >
                             Sign Out

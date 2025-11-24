@@ -8,11 +8,12 @@ const VideoBackground = ({ movieId }) => {
     return (
         <>
             <div>
-                <iframe 
-                className="w-screen h-screen"
-                src={"https://www.youtube.com/embed/"+ trailerVideo?.key+"?autoplay=1&mute=1" }
-                title="Frankenstein | Guillermo del Toro | Official Trailer | Netflix" 
-                ></iframe>
+                <iframe
+                    className="w-full md:w-screen md:h-screen"
+                    src={"https://www.youtube.com/embed/" + trailerVideo?.key + "?autoplay=1&mute=1"}
+                    title="Frankenstein | Guillermo del Toro | Official Trailer | Netflix"
+                >
+                </iframe>
             </div>
         </>
     )
