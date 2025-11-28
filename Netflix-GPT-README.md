@@ -1,5 +1,7 @@
-# NetflixGPT
-Using React
+
+# Episode 14 - NetflixGPT - The Beginning 
+### NetflixGPT
+    Using React
 
 # Create Project using following command :
 - npx create-react-app netflix-gpt
@@ -183,3 +185,124 @@ Using React
 - create .env file to keep your secret key (AI_Key);
 - memoization (To stop each and every time api call)
 - Make app responsive
+
+## Bonus Session 1 
+- Personal Branding : 
+    - Personal branding isthe strategic process of defining, promoting, and managing your unique value, skills, and reputation to a target audience.
+    - You can make your brand in two area :
+        1. Offline
+            - Smaller groups/Gathering
+            - Seminars
+            - Meetups
+            - Events
+            - Public Speaking 
+            - Write a book
+            - Helping people Offline
+
+        2. Online 
+            - Blogging
+            - Websites which help people
+            - Freelancing
+            - Github - open source
+            - Leetcode and similar platforms
+            - Competitive programming
+            - Stackoverflow champ
+            - Social Media (max reach, least effort)
+                - LinkedIn
+                - YouTube
+                - Instagram
+                - Twitter
+                - Facebook
+                - Telegram Channel
+                - Discord communities
+                - Tiktok
+                - And many such more more...
+
+        Note : Even before you create your personal brand, you should know what people should know you for !!
+
+        What should you be known for :
+            - As a Youtuber
+            - Teacher
+            - Javascript
+            - React
+            - Founder NamasteDev
+
+        Target Audience (To whom you are going to influence/attractS):
+            - Students
+            - Software Engineers
+            - Founders
+            
+        How do i reach/attract this audience in my network?
+            - Interview
+            - Career tips and tricks
+            - javascript (react)
+            - Quotes, Intellectual posts
+            - Motivational Posts
+
+## Bonus Session 2 
+- LinkedIn (Tips and Tricks):
+    - Text Post
+    - Post with image
+    - Video
+    - PDFs 
+    - Polls
+
+## Bonus Session 3
+- Resume || Interview || Salary Negotiation
+- Resume :
+    - To filter your resume :
+        - Bots - ATS (Software) friendly 
+            - Skills section in your resume
+                - Keywords
+            - Proper Headings
+        - Recruiters
+            - Skills
+            - College Graduation Year
+            - Work Experience
+            - Contact Information
+                - Contact Number
+                - Email Id
+                - LinkedIn
+        - Interviewers 
+            - Technical interviewers
+            - Project 
+                - Recent Project
+                - Challenging project
+            - Good Technical Keywords (Video streaming platform, high scalable,performance, large scale, fast loading, responsive, debouncing in search optimization to reduce the number of network call, caching using Redux store, light and dark colour theme, my apps load 200ms)
+                - Tailwind, parcel, bundler, react testing library (jest), react-router-dom for routing, reconcilation algorithm, UI layer and Data layer, actions, dispatch, reducer , microservice architecture, config driven UI
+            - Link along with each project
+                - Github link
+                - Working Demo link
+            - Skills
+        - Managers :
+            - Proper communication , good leader, developed the large scale, production ready app from the scratch.Ownership (Leadership), i have taken initiative. I am the ownership of code quality, and i am the leader of this project.I have collaborated with product manager.I collaborated with my designer and the product manager and let the UI product.
+
+    Extra stuff :
+        - Certifications
+        - Achievements
+        - Github links
+        - Live project links
+        - Highly Mendatory Single page resume
+        
+    What you have to not do :
+        - Hobbies
+        - Address
+        - Ramdom Achievements
+        - Marital Status
+        - DOB and TOB
+        - Photos
+        - Declaration
+
+Interviews : 
+    - Introduction : Prepare for it.
+        - Top down approach
+        - Start describing high level details about you and projects
+        ( I am working as a software Engineer at TestYantra. I am working with finance engineering team leading 2 UI projects.I have develped youtube, food ordering app and netflix-gpt like app in which i have implemented search features , i have debouncing on it , used lazy loading to optimize the app .)
+        - Recent project
+        - Challenging parts of Project
+            1. First i started building myself then i got one library which helps me a lot.
+            2. I was building search bar but then i thought that will increase the number of api call, to press key, then i thought about debouncing after debouncing, further i implemented caching to improve even more. Because search is  highly used in app . It will reduce a lot of number of network call.
+        - Technical Rounds
+        - Towards the end
+            - Ask
+
