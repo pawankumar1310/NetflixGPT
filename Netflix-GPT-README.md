@@ -304,5 +304,10 @@ Interviews :
             2. I was building search bar but then i thought that will increase the number of api call, to press key, then i thought about debouncing after debouncing, further i implemented caching to improve even more. Because search is  highly used in app . It will reduce a lot of number of network call.
         - Technical Rounds
         - Towards the end
-            - Ask
-
+            - Ask good questions? (don't ask about feedback).
+            - Use this time to know more about team/company
+            
+        - Salary Negotiate
+            - Always ask for exact amount.
+            - If you join early then ask for joining bonus.
+            
